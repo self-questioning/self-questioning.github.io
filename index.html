@@ -1,9 +1,378 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Hello World  </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta charset="utf-8">
+    <meta property="og:title" content="Self-Questioning Language Models" />
+    <meta property="og:description" content="Self-Questioning Language Models" />
+    <meta property="og:url" content="https://Self-Questioning.github.io/" />
+    <meta property="og:image" content="https://rent-paper.github.io/static/images/sqlm.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Self-Questioning Language Models" />
+    <meta name="twitter:url" content="https://Self-Questioning.github.io/" />
+    <meta name="twitter:image" content="https://Self-Questioning.github.io/static/images/sqlm.jpg" />
+    <meta name="twitter:site" content="@SelfQuestioning" />
+    <meta name="twitter:image" content="https://Self-Questioning.github.io/static/images/sqlm.jpg" />
+    <meta name="twitter:image:src" content="https://Self-Questioning.github.io/static/images/sqlm.jpg" />
+    <meta name="twitter:image_alt" content="Self-Questioning Language Models" />
+
+    <title>Self-Questioning Language Models</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYWGEJGP6S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RYWGEJGP6S');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://use.typekit.net/iag3ven.css">
+
+    <link rel="stylesheet" href="./static/css/prism.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.0.1/prism-bibtex.min.js">
+    </script>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+
+    <!-- mathjax -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+
 </head>
+
 <body>
-    <h1>Hello World</h1>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <p style="padding: 20px;" />
+                        <h1 class="title is-1 publication-title">
+                            <span id="main-title">
+                                Self-Questioning Language Models
+                            </span>
+                        </h1>
+                        <div class="is-size-5 publication-authors" style="line-height: 2.2; font-weight: 500; white-space: nowrap;">
+                            <span class="author-block">
+                                <a href="https://www.lilichen.me/" target="_blank" class="author-name">Lili Chen</a>
+                            </span>
+                            &nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="https://mihirp1998.github.io/" target="_blank" class="author-name">Mihir Prabhudesai</a>
+                            </span>
+                            &nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="https://www.cs.cmu.edu/~katef/" target="_blank" class="author-name">Katerina Fragkiadaki</a>
+                            </span>
+                            &nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="https://www.haoliu.ai/" target="_blank" class="author-name">Hao Liu</a>
+                            </span>
+                            &nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank" class="author-name">Deepak Pathak</a>
+                            </span>
+                        </div>
+                        <p style="padding: 0.2rem;" />
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block" style="color: #252525;">Carnegie Mellon University</span><br>
+                            <br style="line-height: 2px" />
+                        </div>
+
+                        <p style="padding: 10px;" />
+
+                        <div class="buttons is-centered">
+                            <button class="external-link button is-medium is-ghost publication-links is-rounded">
+                                <a href="./static/docs/sqlm.pdf" target="_blank"
+                                    style="text-decoration:none;">
+                                    <span class="icon is-small">
+                                        <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>arXiv</span>
+                                </a>
+                            </button>
+                            <button class="external-link button is-medium is-ghost publication-links is-rounded">
+                                <a href="./static/docs/sqlm.pdf" target="_blank">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>pdf</span>
+                                </a>
+                            </button>
+                            <button class="external-link button is-medium is-ghost publication-links is-rounded">
+                                <a href="./static/docs/sqlm.pdf" target="_blank">
+                                    <span class="icon is-small">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>code</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- hack to pull the below up vertically -->
+    <span style="display:block; margin-top:-1.75em;"/>
+
+        <!-- Method Overview -->
+    <section class="section" id="method-overview">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered has-text-centered">
+                <div class="column" style="border-radius: 10px; background-color: rgb(255,255,255)">
+                    <p style="padding: 10px;" />
+                    <div id="method-overview-wrapper">
+                        <img src="./static/images/sqlm.jpg" alt="Self-Questioning Language Models"
+                        class="method-overview-full-img  method-overview" draggable="false" />                        
+                        <!-- <img src="./static/images/AIME24.png" alt="RENT method overview."
+                            class="method-overview-full-img  method-overview" draggable="false" /> -->
+
+                    </div>
+                            <p style="padding: 10px;" />
+                        <div class="method-overview-text has-text-justified">
+                            <p>
+                                Overview of Self-Questioning Language Models. The only input to the system is a single prompt, given to the proposer. The proposer generates a question related to the given topic, and the solver aims to solve the question. The solver's reward is computed by using the majority vote as a proxy for the ground-truth answer. The proposer's reward is computed based on how many of the answers match the majority answer, to encourage problems not to be too easy or too difficult.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Method Overview -->
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            <b>Can large language models improve without external data -- by generating their own questions and answers?</b> We hypothesize that a pre-trained language model can improve its reasoning skills <em>given only a single prompt</em> specifying the topic (e.g., algebra word problems) and asking the model to generate its own questions. To do this, we propose Self-Questioning Language Models (SQLM): an asymmetric self-play framework where a proposer is given the topic and generates a question for a solver, who tries to answer it. Both the proposer and solver are trained via reinforcement learning. The proposer receives a reward if the problem is not too easy or too difficult, and the solver receives a reward based on majority voting, a proxy for correctness in the absence of ground-truth answers. For coding, the proposer can instead generate unit tests which are used for verification. We study this asymmetric self-play framework on three benchmarks: three-digit multiplication, algebra problems from the OMEGA benchmark, and programming problems from Codeforces. By continually generating more interesting problems and attempting to solve them, language models can improve on downstream benchmarks without access to any curated training datasets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+    <p style="padding: 20px;" />
+
+    <!-- Method Details -->
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">
+                        Minimax Objective and Reward Functions
+                    </h2>
+                    <div class="content has-text-justified">
+                        <p class="equation-text">
+                            We train two policies in a self-play setup: a <strong>proposer</strong> policy 
+                            \(\pi_{P_t}(x)\) that generates problems and a <strong>solver</strong> policy 
+                            \(\pi_S(y_{\text{pred}} \mid x)\) that attempts to solve them. Both are optimized 
+                            via reinforcement learning to maximize their expected rewards:
+                        </p>
+                        <p class="equation" style="text-align: center; margin: 20px 0;">
+                            \[
+                            \text{Solver: } \mathbb{E}_{x \sim \pi_{P_t},\, y_{\text{pred}} \sim \pi_S}[ \mathcal{R}_S(x, y_{\text{pred}}) ],
+                            \quad
+                            \text{Proposer: } \mathbb{E}_{x \sim \pi_{P_t},\, y_{\text{pred}} \sim \pi_S}[ \mathcal{R}_P(x, y_{\text{pred}}) ]
+                            \]
+                        </p>
+                        <p class="equation-text">
+                            The proposer's problems condition the solver, and the solver's performance provides rewards 
+                            that in turn refine the proposer. Since there are no ground-truth answers, we design 
+                            self-supervised reward functions based on the generator-verifier gap.
+                        </p>
+                        <p class="equation-text">
+                            <strong>Small generator-verifier gap (e.g. arithmetic):</strong> verification is as 
+                            difficult as generation. We use majority voting as a proxy reward:
+                        </p>
+                        <p class="equation" style="text-align: center; margin: 20px 0;">
+                            \[
+                            \mathcal{R}_S(x, y_i) =
+                            \begin{cases}
+                            1 & \text{if } y_i = y_{\text{maj}}, \\
+                            0 & \text{otherwise}
+                            \end{cases},
+                            \quad
+                            \mathcal{R}_P(x) =
+                            \begin{cases}
+                            1 & \text{if } 0 < |\{y_i = y_{\text{maj}}\}| < N, \\
+                            0 & \text{otherwise}
+                            \end{cases}
+                            \]
+                        </p>
+                        <p class="equation-text">
+                            <strong>Large generator-verifier gap (e.g. coding):</strong> verification is easier than 
+                            generation. The proposer generates test cases, and rewards are based on the fraction of 
+                            tests passed:
+                        </p>
+                        <p class="equation" style="text-align: center; margin: 20px 0;">
+                            \[
+                            \mathcal{R}_S(x, y_{\text{pred}}) = \text{Pass}(y_{\text{pred}}, \text{Tests}(x)),
+                            \quad
+                            \mathcal{R}_P(x, y_{\text{pred}}) =
+                            \begin{cases}
+                            1 & \text{if } 0 < \text{Pass}(y_{\text{pred}}, \text{Tests}(x)) < 1, \\
+                            0 & \text{otherwise}
+                            \end{cases}
+                            \]
+                        </p>
+                        <p class="equation-text">
+                            This minimax formulation enables stable training through self-play while adapting 
+                            reward design to the problem domain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--/ Method Details -->
+
+    <p style="padding: 20px;" />
+
+
+<!-- Results -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-three-quarters">
+                <h2 class="title is-3">Main Results</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        We evaluate Qwen2.5-3B-Instruct with and without self-play, and compare against a format reward baseline. 
+                        For coding tasks, we use the Qwen2.5-Coder-3B-Instruct model. Self-play consistently improves performance 
+                        across all tasks, with the best results highlighted in bold. Reported values include standard deviations 
+                        across three training runs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="padding: 10px;" />
+    
+    <!-- Table with same width as Method Overview -->
+    <div class="container is-max-widescreen">
+        <div class="columns is-centered has-text-centered">
+            <div class="column" style="border-radius: 10px; background-color: rgb(255,255,255)">
+                <div class="table-container" style="padding: 10px;">
+                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                        <caption style="caption-side: top; padding: 10px 0; font-weight: bold;">
+                            Test set accuracy for Qwen2.5-3B-Instruct with and without self-play and comparison to the format reward baseline
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class="has-text-centered">Model</th>
+                                <th class="has-text-centered">Multiplication</th>
+                                <th class="has-text-centered">Lin. Eqns.</th>
+                                <th class="has-text-centered">Codeforces</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Qwen2.5-(Coder)-3B-Instruct</td>
+                                <td class="has-text-centered">0.791</td>
+                                <td class="has-text-centered">0.440</td>
+                                <td class="has-text-centered">0.320</td>
+                            </tr>
+                            <tr>
+                                <td>+ self-play</td>
+                                <td class="has-text-centered has-text-weight-bold">0.948 ± 0.009</td>
+                                <td class="has-text-centered has-text-weight-bold">0.600 ± 0.010</td>
+                                <td class="has-text-centered has-text-weight-bold">0.391 ± 0.019</td>
+                            </tr>
+                            <tr>
+                                <td>+ self-play (format reward)</td>
+                                <td class="has-text-centered">0.826 ± 0.079</td>
+                                <td class="has-text-centered">0.553 ± 0.015</td>
+                                <td class="has-text-centered">N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="#" target="_blank">
+                    <i class="ai ai-arxiv"></i>
+                </a>
+                &nbsp;
+                <a class="icon-link" href="./static/docs/sqlm.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                &nbsp;
+                <a class="icon-link" href="#" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="content">
+                    <p>
+                        Page source code was adapted from
+                        <a href="https://nerfies.github.io" target="_blank">here</a>
+                        and
+                        <a href="https://diffusion-classifier.github.io" target="_blank">here</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.0.1/prism-bibtex.js"
+        integrity="sha256-+dK6uqUp/DnP6ef97s8XcoynBnGe5vM5gvBECH0EB3U=" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>
